@@ -1,0 +1,41 @@
+<template name="groupForm">
+    {{> groupList}}
+    <h1>Add Group</h1>
+    {{> quickForm collection="groups" id="insertGroup" type="insert"}}
+</template>
+
+<template name="groupList">
+    <h1>Groups</h1>
+    <ul>
+        {{#each groupsall}}
+            {{>groupListItem}}
+        {{/each}}
+    </ul>
+</template>
+
+<template name="groupListItem">
+    <li>
+        <span>{{name}}</span>
+        <span>{{description}}</span>
+        <p>
+            <span> Members </span>
+            <ul>
+                {{#each groupPeople}}
+                    <li>
+                        {{name}}
+                    </li>
+                {{/each}}
+            </ul>
+        </p>
+        <p>
+            <span>Performance Types</span>
+            <ul>
+                {{#each groupPerformanceTypes}}
+                    <li>
+                        {{name}}
+                    </li>
+                {{/each}}
+            </ul>
+        </p>
+    </li>
+</template>

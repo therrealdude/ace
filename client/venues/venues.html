@@ -1,0 +1,20 @@
+<template name='venue'>
+    <div class="container">
+        <h1>Venues</h1>
+        <ul>
+            {{#each venueslist}}
+                {{>venueLI}}
+            {{/each}}
+        </ul>
+        {{> quickForm collection="Venues" id="insertVenue" type="insert"}}
+    </div>
+</template>
+
+<template name='venueLI'>
+    <li class="venue-li">
+        <span class='bg-warning'>{{name}}</span><br/>
+        <span class='bg-danger'>{{address1}} {{address2}}</span><br/>
+        <span class='bg-info'>{{city}}, {{state}} {{zip}}</span><br/>
+        <span>{{manager}}</span><br/>
+    </li>
+</template>

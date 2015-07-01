@@ -1,0 +1,15 @@
+<template name="performanceTypes">
+    <h1>Performance Types</h1>
+    <ul class='perftypes'>
+        {{#each pfs}}
+            {{>performanceType}}
+        {{/each}}
+    </ul>
+    {{> quickForm collection="PerformanceTypes" id="insertPerformanceType" type="insert"}}
+</template>
+
+<template name="performanceType">
+    <li>
+        {{name}}: {{description}}
+    </li>
+</template>

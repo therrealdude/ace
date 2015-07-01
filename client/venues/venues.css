@@ -1,0 +1,15 @@
+.venue-li {
+    color:white;
+    background-color:grey;
+    border-color:white;
+    border-style: double;
+    border-radius:5px;
+}
+
+.venue-li span{
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+body {
+}

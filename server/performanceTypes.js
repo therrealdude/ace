@@ -1,0 +1,1 @@
+PerformanceTypes = new Mongo.Collection('PerformanceTypes');

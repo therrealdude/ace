@@ -1,0 +1,28 @@
+<template name="showForm">
+    <h1>Add Show</h1>
+    {{> quickForm collection="shows" id="insertShow" type="insert"}}
+</template>
+
+<template name="showList">
+    <br/>
+    <p>
+        <div>
+            <ul>
+                {{#each showlist}}
+                    {{> showListItem}}
+                {{/each}}
+            </ul>
+        </div>
+    </p>
+</template>
+
+<template name="showListItem">
+    <li>
+        {{title}}
+        {{description}}
+        {{venue.name}}
+        {{#each showDates}}
+            {{date}}
+        {{/each}}
+    </li>
+</template>

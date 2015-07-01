@@ -1,0 +1,21 @@
+<template name="person">
+    {{>people}}
+    <h1>Add Person</h1>
+    {{> quickForm collection="People" id="insertPerson" type="insert"}}
+</template>
+
+<template name="people">
+    <h1>People</h1>
+    <ul>
+        {{#each peoplelist}}
+            {{>personListItem}}
+        {{/each}}
+    </ul>
+</template>
+
+<template name="personListItem">
+    <li>
+        <span>{{name}}</span>
+        <span>{{performanceType}}</span>
+    </li>
+</template>
